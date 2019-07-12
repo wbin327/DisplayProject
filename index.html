@@ -14,7 +14,12 @@
 </head>
 <body>
 
+<div class="bg-img">
+    <img src="./static/images/bg.png">
+</div>
+
 <div class="content">
+
     <!-- 页面顶部按钮组 -->
     <div class="button-group">
         <div class="select-input">
@@ -29,56 +34,131 @@
 
     <!-- 页面中部公司信息 -->
     <div class="company-content">
+<!--        <div class="company-msg">-->
+<!--            <div class="company-logo">-->
+<!--                <img src="./static/images/logo_ico.png">-->
+<!--            </div>-->
+<!--            <div class="company-name">-->
+<!--                深圳五洲雅高工程设计研究院有限公司-->
+<!--            </div>-->
+<!--            <div class="hr"></div>-->
+<!--            <div class="company-year">-->
+<!--                26 YEARS <img src="./static/images/champ_ico.png">-->
+<!--            </div>-->
+<!--            <div class="company-title">-->
+<!--                Successful Experience in Architectural Design-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="company-introduction">-->
+<!--            <div class="introduction-box">-->
+<!--                <p>深圳五洲雅高工程设计研究院是由与加拿大Arcop设计集团设立在香港和深圳的设计机构- 雅高（中国）设计顾问有限公司及深圳雅高联合工程设计有限公司逐步发展形成，2014年初与中国五洲工程设计集团建立紧密战略合作关系- 结合自身国际化的创意能力和中国五洲强大的技术实力和专业背景为客户提供各全面的技术服务和更高品质的建筑作品。</p>-->
+<!--                <p>五洲雅高擅长高级酒店、企业总部和城市综合体、高端住宅、旅游规划及城市设计，作为一家成功的国际化设计企业，五洲雅高重要的一点在于对待业主多样的需求和发展观念，不论项目大小和性质，都会竭尽全力理解业主的需求，为业主提供量身定做的整体解决方案。作为充满激情和创造力的建筑师团队，我们重视现代生活，时尚观念和业主的价值观，以丰富的工程经验和技术特长，使我们的作品以欢欣鼓舞的全新感受，融入当今的社会。五洲雅高的愿望，就是最大限度的提高项目的价值和品牌。</p>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+
+    <!-- 公司信息渲染模板 -->
+    <script type="text/x-dot-template" id="company-template">
         <div class="company-msg">
             <div class="company-logo">
-                <img src="./static/images/logo_ico.png" class="">
+                <img src="{{=it.logo}}">
             </div>
             <div class="company-name">
-                深圳五洲雅高工程设计研究院有限公司
+                {{=it.name}}
             </div>
+            <div class="hr"></div>
             <div class="company-year">
-                26 YEARS <img src="./static/images/champ_ico.png">
+                {{=it.year}} <img src="./static/images/champ_ico.png">
             </div>
             <div class="company-title">
-                Successful Experience in Architectural Design
+                {{=it.title}}
             </div>
         </div>
         <div class="company-introduction">
             <div class="introduction-box">
-                <p>深圳五洲雅高工程设计研究院是由与加拿大Arcop设计集团设立在香港和深圳的设计机构- 雅高（中国）设计顾问有限公司及深圳雅高联合工程设计有限公司逐步发展形成，2014年初与中国五洲工程设计集团建立紧密战略合作关系- 结合自身国际化的创意能力和中国五洲强大的技术实力和专业背景为客户提供各全面的技术服务和更高品质的建筑作品。</p>
-                <p>五洲雅高擅长高级酒店、企业总部和城市综合体、高端住宅、旅游规划及城市设计，作为一家成功的国际化设计企业，五洲雅高重要的一点在于对待业主多样的需求和发展观念，不论项目大小和性质，都会竭尽全力理解业主的需求，为业主提供量身定做的整体解决方案。作为充满激情和创造力的建筑师团队，我们重视现代生活，时尚观念和业主的价值观，以丰富的工程经验和技术特长，使我们的作品以欢欣鼓舞的全新感受，融入当今的社会。五洲雅高的愿望，就是最大限度的提高项目的价值和品牌。</p>
+                <p>{{=it.introduction}}</p>
             </div>
         </div>
-    </div>
+    </script>
 
     <!-- 底部项目展示栏 -->
     <div class="footer-display">
+<!--        <div class="type-group">-->
+<!--            <div class="type-block">-->
+<!--                酒店设计-->
+<!--            </div>-->
+<!--            <div class="type-block">-->
+<!--                居住建筑-->
+<!--            </div>-->
+<!--            <div class="type-block">-->
+<!--                综合体-->
+<!--            </div>-->
+<!--            <div class="type-block">-->
+<!--                城市规划-->
+<!--            </div>-->
+<!--            <div class="type-block">-->
+<!--                室内设计-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="image-group">-->
+<!--            <div class="image-box">-->
+<!--                <div class="picture">-->
+<!--                    <img src="./static/images/aerial-view.png" >-->
+<!--                    <div class="black-box" style="visibility: hidden">-->
+<!--                        <p>高尔夫花园方案</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="picture">-->
+<!--                    <img src="./static/images/GolfGarden.jpg" >-->
+<!--                    <div class="black-box" style="visibility: hidden">-->
+<!--                        <p>高尔夫花园方案</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="picture">-->
+<!--                    <img src="./static/images/apartment.png">-->
+<!--                    <div class="black-box" style="visibility: hidden">-->
+<!--                        <p>高尔夫花园方案</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="pre-img">-->
+<!--                <img src="./static/images/left_ico.png">-->
+<!--            </div>-->
+<!--            <div class="next-img">-->
+<!--                <img src="./static/images/right_ico.png">-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+
+    <!-- 底部展示栏目渲染模板 -->
+    <script type="text/x-dot-template" id="display-template">
         <div class="type-group">
+            {{~it:item:index}}
             <div class="type-block">
-                酒店设计
+                {{=item.typeName}}
             </div>
-            <div class="type-block">
-                居住建筑
-            </div>
-            <div class="type-block">
-                综合体
-            </div>
-            <div class="type-block">
-                城市规划
-            </div>
-            <div class="type-block">
-                室内设计
-            </div>
+            {{~}}
         </div>
         <div class="image-group">
             <div class="image-box">
-                <img src="./static/images/GolfGarden.jpg">
+                {{~it[0].projectList:item:index}}
+                <div class="picture">
+                    <img src="{{=item.imageLink}}" >
+                    <div class="black-box" >
+                        <p>{{=item.projectName}}</p>
+                    </div>
+                </div>
+                {{~}}
             </div>
-            <div class="image-box">
-                <img src="./static/images/GolfGarden.jpg">
+            <div class="pre-img">
+                <img src="./static/images/left_ico.png">
+            </div>
+            <div class="next-img">
+                <img src="./static/images/right_ico.png">
             </div>
         </div>
-    </div>
+    </script>
+
 </div>
 
 <!-- 引入JS工具类方法 -->
