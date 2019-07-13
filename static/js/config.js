@@ -31,6 +31,21 @@ let data =
                     "projectName": "方案2",
                     "imageLink": "{baseUrl}/static/images/apartment.png",
                     "link": "http://localhost:63342/GolfGardenProject//index-v2.html"
+                },
+                {
+                    "projectName": "浏阳（长沙东）碧桂园高尔夫花园方案",
+                    "imageLink": "{baseUrl}/static/images/GolfGarden.jpg",
+                    "link": "http://localhost:63342/GolfGardenProject//index-v2.html"
+                },
+                {
+                    "projectName": "方案1",
+                    "imageLink": "{baseUrl}/static/images/aerial-view.png",
+                    "link": "http://localhost:63342/GolfGardenProject//index-v2.html"
+                },
+                {
+                    "projectName": "方案2",
+                    "imageLink": "{baseUrl}/static/images/apartment.png",
+                    "link": "http://localhost:63342/GolfGardenProject//index-v2.html"
                 }
             ]
         },

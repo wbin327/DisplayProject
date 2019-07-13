@@ -140,18 +140,17 @@ body{
     right: 0;
     font-size: 0.16rem;
     text-align: justify;
+    letter-spacing: 1px;
     padding-left: 0.3rem;
     padding-right: 0.3rem;
-    letter-spacing: 1px;
-    overflow-y: overlay;
-}
-.company-introduction .introduction-box{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    overflow-y: auto;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
 }
 .company-introduction p{
     margin: 0;
+    /*padding-top: 0.5rem;*/
     line-height:170%;
 }
 
@@ -196,6 +195,7 @@ body{
 .image-box .picture{
     margin-right: 0.36rem;
     position: relative;
+
 }
 .image-box .picture .black-box{
     position: absolute;
@@ -204,17 +204,21 @@ body{
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 .image-box .picture .black-box p{
-    margin: 0;
-    position: absolute;
-    bottom: 0.2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 2.3rem;
+    margin-bottom: 0;
+    /*position: absolute;*/
+    /*bottom: 0.2rem;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
 }
-.footer-display .image-group .image-box img{
+.image-box .picture img{
     width: auto;
     height: 2.7rem;
+    /*图片变大变小时的动效*/
+    /*transition: all 1s ease;*/
 }
 .footer-display .pre-img{
     position: absolute;

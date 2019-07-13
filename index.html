@@ -75,9 +75,7 @@
             </div>
         </div>
         <div class="company-introduction">
-            <div class="introduction-box">
-                <p>{{=it.introduction}}</p>
-            </div>
+            <p>{{=it.introduction}}</p>
         </div>
     </script>
 
@@ -141,14 +139,7 @@
         </div>
         <div class="image-group">
             <div class="image-box">
-                {{~it[0].projectList:item:index}}
-                <div class="picture">
-                    <img src="{{=item.imageLink}}" >
-                    <div class="black-box" >
-                        <p>{{=item.projectName}}</p>
-                    </div>
-                </div>
-                {{~}}
+                <!-- 渲染底部图片展示 -->
             </div>
             <div class="pre-img">
                 <img src="./static/images/left_ico.png">
@@ -158,6 +149,19 @@
             </div>
         </div>
     </script>
+
+    <!-- 底部图片展示渲染模板 -->
+    <script type="text/x-dot-template" id="image-group-template">
+        {{~it:item:index}}
+        <div class="picture">
+            <img src="{{=item.imageLink}}" >
+            <div class="black-box" style="visibility: hidden">
+                <p>{{=item.projectName}}</p>
+            </div>
+        </div>
+        {{~}}
+    </script>
+
 
 </div>
 
